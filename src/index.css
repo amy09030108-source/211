@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: light dark;
+}
+
+.font-display {
+  font-family: 'Outfit', 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Subtle tech grid background with soft pink hue */
+.bg-tech-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(244, 63, 94, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(244, 63, 94, 0.05) 1px, transparent 1px);
+}
+
+.dark .bg-tech-grid {
+  background-image: 
+    linear-gradient(to right, rgba(251, 113, 133, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(251, 113, 133, 0.04) 1px, transparent 1px);
+}
+
+/* Custom scrollbar with pink accent */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(244, 63, 94, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 63, 94, 0.6);
+}
+
+/* Glowing pink accent effect */
+.glow-accent {
+  box-shadow: 0 0 50px -10px rgba(244, 63, 94, 0.35);
+}
